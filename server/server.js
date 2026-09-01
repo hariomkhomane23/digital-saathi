@@ -13,12 +13,27 @@ const PORT = process.env.PORT || 5000;
 
 // ================= MIDDLEWARE =================
 
+const allowedOrigins = [
+    "http://localhost:5173",
+    "https://digital-saathi-seven.vercel.app",
+    "https://digital-saathi-fi7nn9box-hariomkhomane23s-projects.vercel.app"
+];
+
 app.use(
     cors({
-        origin: [
-            "http://localhost:5173",
-            "https://digital-saathi-seven.vercel.app"
-        ],
+        origin: function (origin, callback) {
+            // Allow requests without an origin
+            // (Postman, server-to-server, etc.)
+            if (!origin) {
+                return callback(null, true);
+            }
+
+            if (allowedOrigins.includes(origin)) {
+                return callback(null, true);
+            }
+
+            return callback(new Error("Not allowed by CORS"));
+        },
         methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         credentials: true
     })
