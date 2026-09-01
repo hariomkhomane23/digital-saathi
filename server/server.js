@@ -17,9 +17,9 @@ app.use(
     cors({
         origin: [
             "http://localhost:5173",
-            "https://digital-saathi-hqu9e3rlz-hariomkhomane23s-projects.vercel.app"
+            "https://digital-saathi-seven.vercel.app"
         ],
-        methods: ["GET", "POST", "PUT", "DELETE"],
+        methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         credentials: true
     })
 );
