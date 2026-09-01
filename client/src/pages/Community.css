@@ -1,0 +1,544 @@
+/* =========================================
+   DIGITAL SAATHI - COMMUNITY PAGE
+========================================= */
+
+.community-page {
+    min-height: 100vh;
+    background: #f5f7fb;
+    padding: 30px 6%;
+    box-sizing: border-box;
+    color: #1f2937;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.community-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.header-content {
+    flex: 1;
+}
+
+.back-button {
+    border: none;
+    background: transparent;
+    color: #2563eb;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 12px;
+}
+
+.back-button:hover {
+    color: #1d4ed8;
+}
+
+.community-header h1 {
+    margin: 0;
+    font-size: 32px;
+    color: #111827;
+}
+
+.community-header p {
+    margin-top: 8px;
+    margin-bottom: 0;
+    color: #6b7280;
+    font-size: 16px;
+}
+
+.create-post-button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 13px 22px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+    white-space: nowrap;
+}
+
+.create-post-button:hover {
+    background: #1d4ed8;
+    transform: translateY(-1px);
+}
+
+/* =========================================
+   SAFETY WARNING
+========================================= */
+
+.safety-warning {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+
+    padding: 17px 20px;
+    border-radius: 12px;
+
+    margin-bottom: 28px;
+}
+
+.warning-icon {
+    font-size: 27px;
+}
+
+.safety-warning h3 {
+    margin: 0;
+    color: #9a3412;
+    font-size: 16px;
+}
+
+.safety-warning p {
+    margin: 5px 0 0;
+    color: #7c2d12;
+    font-size: 14px;
+}
+
+/* =========================================
+   CREATE POST
+========================================= */
+
+.create-post-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+.create-post-card h2 {
+    margin: 0;
+    color: #111827;
+}
+
+.create-post-card > p {
+    margin-top: 7px;
+    color: #6b7280;
+}
+
+.create-post-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.create-post-card label {
+    font-weight: 600;
+    margin-top: 8px;
+}
+
+.create-post-card input,
+.create-post-card textarea,
+.create-post-card select {
+    width: 100%;
+    box-sizing: border-box;
+
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+
+    padding: 12px;
+
+    font-size: 15px;
+    font-family: inherit;
+
+    outline: none;
+}
+
+.create-post-card input:focus,
+.create-post-card textarea:focus,
+.create-post-card select:focus {
+    border-color: #2563eb;
+}
+
+.create-post-card textarea {
+    resize: vertical;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.cancel-button,
+.submit-button {
+    border: none;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.cancel-button {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.cancel-button:hover {
+    background: #d1d5db;
+}
+
+.submit-button {
+    background: #2563eb;
+    color: white;
+}
+
+.submit-button:hover {
+    background: #1d4ed8;
+}
+
+/* =========================================
+   CATEGORIES
+========================================= */
+
+.category-section {
+    margin-bottom: 25px;
+}
+
+.category-section h2 {
+    font-size: 21px;
+    margin: 0 0 15px;
+}
+
+.category-list {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.category-button {
+    background: white;
+    border: 1px solid #d1d5db;
+
+    padding: 9px 15px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    color: #4b5563;
+
+    transition: 0.2s;
+}
+
+.category-button:hover {
+    border-color: #2563eb;
+    color: #2563eb;
+}
+
+.category-button.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+/* =========================================
+   MAIN LAYOUT
+========================================= */
+
+.community-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 25px;
+}
+
+/* =========================================
+   FEED
+========================================= */
+
+.feed-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.feed-title h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.feed-title span {
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* =========================================
+   POST CARD
+========================================= */
+
+.post-card {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 22px;
+
+    margin-bottom: 18px;
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+
+    transition: 0.2s;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.07);
+}
+
+/* POST HEADER */
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.user-avatar {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #dbeafe;
+    color: #1d4ed8;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: 700;
+}
+
+.user-info h3 {
+    margin: 0;
+    font-size: 15px;
+}
+
+.user-info span {
+    color: #9ca3af;
+    font-size: 12px;
+}
+
+.post-category {
+    background: #fee2e2;
+    color: #b91c1c;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* POST CONTENT */
+
+.post-content {
+    margin-top: 18px;
+}
+
+.post-content h2 {
+    font-size: 19px;
+
+    margin: 0 0 8px;
+
+    color: #111827;
+}
+
+.post-content p {
+    color: #4b5563;
+
+    line-height: 1.6;
+
+    margin: 0;
+}
+
+/* POST ACTIONS */
+
+.post-actions {
+    display: flex;
+    gap: 8px;
+
+    border-top: 1px solid #f0f0f0;
+
+    margin-top: 18px;
+    padding-top: 13px;
+
+    flex-wrap: wrap;
+}
+
+.post-actions button {
+    border: none;
+
+    background: transparent;
+
+    color: #4b5563;
+
+    padding: 8px 10px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+}
+
+.post-actions button:hover {
+    background: #f3f4f6;
+    color: #2563eb;
+}
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.community-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.sidebar-card {
+    background: white;
+
+    border-radius: 15px;
+
+    padding: 22px;
+
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.sidebar-card h2 {
+    font-size: 18px;
+    margin-top: 0;
+}
+
+.sidebar-card ul {
+    padding-left: 20px;
+    margin-bottom: 0;
+}
+
+.sidebar-card li {
+    margin-bottom: 10px;
+
+    color: #4b5563;
+
+    line-height: 1.4;
+}
+
+.important-card {
+    background: #fff7ed;
+
+    border: 1px solid #fed7aa;
+}
+
+.important-card p {
+    color: #7c2d12;
+
+    line-height: 1.6;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.no-posts {
+    background: white;
+
+    border-radius: 15px;
+
+    text-align: center;
+
+    padding: 60px 20px;
+}
+
+.no-post-icon {
+    font-size: 40px;
+}
+
+.no-posts h3 {
+    margin-bottom: 5px;
+}
+
+.no-posts p {
+    color: #6b7280;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .community-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .community-sidebar {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .community-page {
+        padding: 20px 4%;
+    }
+
+    .community-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .create-post-button {
+        width: 100%;
+    }
+
+    .community-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .post-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .post-category {
+        align-self: flex-start;
+    }
+
+    .form-buttons {
+        flex-direction: column;
+    }
+
+    .cancel-button,
+    .submit-button {
+        width: 100%;
+    }
+}

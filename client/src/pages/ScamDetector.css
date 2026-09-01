@@ -1,0 +1,306 @@
+.scam-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: #f5f7fb;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.scam-header {
+    text-align: center;
+    max-width: 750px;
+    margin: 0 auto 30px;
+}
+
+.shield-icon {
+    font-size: 55px;
+}
+
+.scam-header h1 {
+    font-size: 34px;
+    margin: 10px 0;
+    color: #111827;
+}
+
+.scam-header p {
+    color: #666;
+    font-size: 17px;
+}
+
+/* MAIN INPUT CARD */
+.scam-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 30px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-title h2 {
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.card-title p {
+    color: #777;
+    margin-bottom: 18px;
+}
+
+/* SAMPLE PROMPTS CHIPS */
+.sample-prompts {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.sample-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #6b7280;
+    margin-right: 4px;
+}
+
+.sample-btn {
+    background: #f3f4f6;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.sample-btn:hover {
+    background: #e5e7eb;
+    border-color: #d1d5db;
+    color: #111827;
+}
+
+.scam-card textarea {
+    width: 100%;
+    min-height: 160px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    resize: vertical;
+    font-size: 15px;
+    line-height: 1.5;
+    font-family: inherit;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.scam-card textarea:focus {
+    border-color: #4f46e5;
+}
+
+.button-row {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.analyze-btn,
+.clear-btn {
+    padding: 13px 22px;
+    border: none;
+    border-radius: 9px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.analyze-btn {
+    flex: 1;
+    background: #4f46e5;
+    color: white;
+}
+
+.analyze-btn:hover {
+    background: #3730a3;
+}
+
+.analyze-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.clear-btn {
+    background: #e5e7eb;
+    color: #333;
+}
+
+.clear-btn:hover {
+    background: #d1d5db;
+}
+
+.error-message {
+    margin-top: 15px;
+    padding: 12px;
+    background: #fee2e2;
+    color: #991b1b;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* RESULT CARD */
+.result-card {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 18px;
+    border-left: 6px solid #999;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.result-card.high-risk {
+    border-left-color: #dc2626;
+}
+
+.result-card.medium-risk {
+    border-left-color: #f59e0b;
+}
+
+.result-card.low-risk {
+    border-left-color: #16a34a;
+}
+
+/* OFFLINE FALLBACK BADGE */
+.fallback-badge {
+    background: #fef3c7;
+    color: #92400e;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 6px;
+    margin-bottom: 18px;
+    display: inline-block;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.result-label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #777;
+}
+
+.result-header h2 {
+    margin-top: 7px;
+    font-size: 24px;
+}
+
+.score-circle {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.score-circle strong {
+    font-size: 26px;
+    line-height: 1;
+}
+
+.score-circle span {
+    font-size: 11px;
+    color: #777;
+    margin-top: 2px;
+}
+
+.result-section {
+    margin-top: 25px;
+}
+
+.result-section h3 {
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: #111827;
+}
+
+.result-section ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.result-section li {
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #374151;
+}
+
+.clean-msg {
+    color: #16a34a;
+    font-weight: 500;
+    margin: 8px 0;
+}
+
+.advice-section {
+    background: #f8fafc;
+    padding: 18px;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+}
+
+.safety-note {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff7ed;
+    border-radius: 10px;
+    border: 1px solid #ffedd5;
+    color: #9a3412;
+    font-size: 14px;
+}
+
+/* RESPONSIVE BREAKPOINTS */
+@media (max-width: 600px) {
+    .scam-page {
+        padding: 25px 15px;
+    }
+
+    .scam-header h1 {
+        font-size: 28px;
+    }
+
+    .scam-card,
+    .result-card {
+        padding: 20px;
+    }
+
+    .sample-prompts {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .button-row {
+        flex-direction: column;
+    }
+
+    .result-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .score-circle {
+        align-self: flex-start;
+    }
+}
