@@ -17,7 +17,7 @@ app.use(
     cors({
         origin: [
             "http://localhost:5173"
-            // We will add your Vercel URL here after deployment
+            "https://digital-saathi-hqu9e3rlz-hariomkhomane23s-projects.vercel.app"
         ],
         methods: ["GET", "POST", "PUT", "DELETE"],
         credentials: true
